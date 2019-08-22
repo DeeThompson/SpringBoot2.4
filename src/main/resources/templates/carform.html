@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#"
+      th:action="@{/car}"
+      th:object="${car}"
+      method="post">
+     Id :<input type="number" th:field="*{id}"  />
+        <Span th:if="${#fields.hasErrors('id'}"
+              th:errors="*{id}"></span><br />
+        Name  :<input type=""text" th:field="*{name}" />
+        <span th:if="${#fields.hasErrors ('name'}"
+              th:errors="*{type}"></span><br />
+        Description  :<textarea rows="3"  th:field="*{description}" />
+    th:errors="*{description}"></span>
+
+    <br  />
+    <input type="submit" value="submit" />
+
+</form>
+
+
+</form>
+
+
+
+</body>
+</html>
